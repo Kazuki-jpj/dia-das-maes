@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background: #1b1028;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+.container{
+
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+/* HERO */
+
+.hero{
+
+    text-align: center;
+
+    padding: 100px 0;
+}
+
+.hero h1{
+
+    font-size: 5rem;
+
+    color: #f4d58d;
+
+    margin-bottom: 35px;
+
+    letter-spacing: 2px;
+}
+
+.hero p{
+
+    font-size: 1.8rem;
+
+    line-height: 1.9;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+/* GALERIA */
+
+.gallery{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 70px;
+
+    margin-top: 60px;
+}
+
+.photo-card{
+
+    background: rgba(255,255,255,0.03);
+
+    border: 2px solid #f4d58d;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+    transition: 0.5s;
+}
+
+.photo-card:hover{
+
+    transform: translateY(-5px);
+}
+
+.photo-card img{
+
+    width: 100%;
+
+    max-height: 750px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo-card p{
+
+    padding: 30px;
+
+    font-size: 1.8rem;
+
+    text-align: center;
+}
+
+/* MENSAGEM FINAL */
+
+.final-message{
+
+    margin-top: 100px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 2px solid #f4d58d;
+
+    padding: 70px 50px;
+
+    border-radius: 40px;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.final-message h2{
+
+    font-size: 4rem;
+
+    color: #f4d58d;
+
+    margin-bottom: 35px;
+}
+
+.final-message p{
+
+    font-size: 1.8rem;
+
+    line-height: 2;
+}
+
+/* CORAÇÃO */
+
+.floating-heart{
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    font-size: 70px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%{
+        transform: scale(1);
+    }
+
+    15%{
+        transform: scale(1.2);
+    }
+
+    30%{
+        transform: scale(1);
+    }
+
+    45%{
+        transform: scale(1.25);
+    }
+
+    60%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+/* TELA DE CARREGAMENTO */
+
+#loading-screen{
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #f8f6f2;
+
+    z-index: 99999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 1s;
+
+    padding: 30px;
+}
+
+.loading-frame{
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 3px solid #6b2d84;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.loading-content{
+
+    width: 90%;
+
+    max-width: 650px;
+
+    text-align: center;
+}
+
+.loading-title{
+
+    font-size: 5rem;
+
+    color: #c9a227;
+
+    margin-bottom: 10px;
+}
+
+.loading-text{
+
+    font-size: 2rem;
+
+    color: #c9a227;
+
+    margin-bottom: 35px;
+}
+
+.loading-line{
+
+    width: 320px;
+
+    height: 2px;
+
+    background: #c9a227;
+
+    margin: 0 auto 40px auto;
+}
+
+.loading-image{
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 25px;
+
+    border: 4px solid #6b2d84;
+
+    margin-bottom: 40px;
+}
+
+.loading-bar-container{
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 14px;
+
+    background: #ece7df;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    border: 2px solid #6b2d84;
+
+    margin: auto;
+}
+
+.loading-bar{
+
+    width: 0%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #c9a227,
+        #f4d58d
+    );
+
+    animation: loading 5s linear forwards;
+}
+
+#loading-finish{
+
+    margin-top: 45px;
+
+    color: #c9a227;
+
+    font-size: 3.5rem;
+
+    opacity: 0;
+
+    transition: 1s;
+}
+
+@keyframes loading{
+
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+
+}
+
+audio{
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 768px){
+
+    .hero h1{
+        font-size: 3rem;
+    }
+
+    .hero p{
+        font-size: 1.3rem;
+    }
+
+    .photo-card p{
+        font-size: 1.3rem;
+    }
+
+    .final-message h2{
+        font-size: 2.5rem;
+    }
+
+    .final-message p{
+        font-size: 1.3rem;
+    }
+
+    .floating-heart{
+        font-size: 50px;
+    }
+
+    .loading-title{
+        font-size: 3.5rem;
+    }
+
+    .loading-text{
+        font-size: 1.5rem;
+    }
+
+    #loading-finish{
+        font-size: 2.5rem;
+    }
+
+}

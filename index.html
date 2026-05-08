@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feliz Dia das Mães 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- TELA DE CARREGAMENTO -->
+
+    <div id="loading-screen">
+
+        <div class="loading-frame">
+
+            <div class="loading-content">
+
+                <h1 class="loading-title">
+                    Mãe,
+                </h1>
+
+                <p class="loading-text">
+                    se prepare para uma surpresa
+                </p>
+
+                <div class="loading-line"></div>
+
+                <img
+                    src="static/foto1.jpg"
+                    class="loading-image"
+                >
+
+                <div class="loading-bar-container">
+                    <div class="loading-bar"></div>
+                </div>
+
+                <h1 id="loading-finish">
+                    Feliz Dia das Mães 💖
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CORAÇÃO -->
+
+    <div class="floating-heart">
+        ❤️
+    </div>
+
+    <!-- MÚSICA -->
+
+    <audio id="bg-music" loop>
+        <source src="static/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- SITE -->
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>Feliz Dia das Mães 💖</h1>
+
+            <p>
+                Mãe, obrigado por tudo que você fez e faz por mim.
+                Nenhuma palavra seria suficiente para descrever o quanto você representa na minha vida.
+            </p>
+
+        </section>
+
+        <section class="gallery">
+
+            <div class="photo-card">
+                <img src="static/foto2.jpg">
+                <p>Obrigado por sempre cuidar de mim </p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto3.jpg">
+                <p>Por estar comigo em todos os momentos ✨</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto4.jpg">
+                <p>Por sempre ter sido o meu exemplo 🤩</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto5.jpeg">
+                <p>Obrigado por ser a pessoa na qual posso contar 💗</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto6.jpeg">
+                <p>Você é minha maior inspiração 🌷</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto7.jpg">
+                <p>Eu te amo infinitamente ❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="static/foto8.jpeg">
+                <p>Obrigado por ser minha mãe</p>
+            </div>
+
+        </section>
+
+        <section class="final-message">
+
+            <h2>Uma mensagem para você ✨</h2>
+
+            <p>
+                Você sempre esteve comigo nos momentos mais difíceis,
+                me apoiando, acreditando em mim e me ensinando a nunca desistir.
+                Obrigado por ser essa mãe incrível.
+                Eu te amo infinitamente.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        const music = document.getElementById('bg-music');
+
+        setTimeout(() => {
+
+            document.getElementById('loading-finish').style.opacity = '1';
+
+        }, 3500);
+
+        setTimeout(() => {
+
+            document.getElementById('loading-screen').style.opacity = '0';
+
+            music.play().catch(() => {
+
+                console.log('Autoplay bloqueado pelo navegador');
+
+            });
+
+            setTimeout(() => {
+
+                document.getElementById('loading-screen').style.display = 'none';
+
+            }, 1000);
+
+        }, 5500);
+
+    </script>
+
+</body>
+
+</html>
